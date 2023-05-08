@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+@font-face {
+    font-family: Montserrat;
+}
+
+nav{
+    display: flex;
+    align-content: end;
+    background-color: #333;
+    border: 1px solid #af2fa2;
+}
+#navigation-links{
+    list-style-type: none;
+}
+li{
+    float: left;
+}
+
+.nav-link{
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+/* ==================================[ hero ] ========================================= */
+.hero{
+    width: 100vw;
+    height: 100vh;
+}
+.hero-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    filter: brightness(70%) blur(2px);
+}
+
+
+
+
+/* ==================================[ about ]========================================== */
+.text-image{
+    display: grid;
+}
+#about-image{
+    height: 60vh;
+}
