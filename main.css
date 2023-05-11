@@ -1,30 +1,113 @@
+
+/* ======================================[ Default Settings for Displays over 1500px ]================================*/
+:root{
+    --text-color: #28322b;
+    --white: #f6f6f6;
+    --red: #DB2955;
+    --green: #44BBA4;
+
+}
 *{
     margin: 0;
     padding: 0;
-    background-color: wheat;
+    background-color: var(--white);
+
 }
 @font-face {
     font-family: Montserrat;
 }
 
+h1{
+    font-family: Montserrat, sans-serif;
+    font-size: 3em;
+    color: var(--text-color);
+}
+h2{
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5em;
+    color: var(--text-color);
+}
+h3{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+h4{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.3em;
+    color: var(--text-color);
+}
+p{
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+    margin: 8px 0;
+    color: var(--text-color);
+}
+b{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+a{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: transparent;
+}
+.big{
+    font-size: 3em;
+}
+
+
+/* =========================================[ Components ]===================================*/
+.normal-button{
+    margin: 0.15em 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.normal-button:hover{
+    margin: 0;
+    filter: brightness(90%);
+    font-size: 1.3em;
+}
+
+.red-button{
+    color: var(--white);
+    background-color: var(--red);
+}
+
+/* ========================================[ Navigation bar ]===============================*/
 nav{
+    position: fixed;
     display: flex;
-    align-content: end;
-    background-color: #333;
+    width: 100%;
+    justify-content: space-between;
+    background-color: transparent;
     border: 1px solid #af2fa2;
 }
-#navigation-links{
-    list-style-type: none;
+.home-button{
+    padding-left: 8vw;
 }
+#navigation-links{
+    padding-right: 8vw;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
 li{
     float: left;
 }
 
 .nav-link{
+    flex-grow: 2;
     display: block;
-    padding: 14px 16px;
+    padding: 20px 20px;
     text-align: center;
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -32,15 +115,31 @@ li{
 .hero{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
 }
-.hero-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-    width: auto;
-    filter: brightness(70%) blur(1.5px);
+.hero-container{
+    margin: 0 10vw;
+    display: flex;
+    align-items: center;
 }
+
+.hero-text{
+    flex-grow: 2;
+    width: 40vw;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.hero-svg{
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    width: 40vw;
+    height: 70vh;
+    flex-grow: 1;
+}
+
 
 
 
