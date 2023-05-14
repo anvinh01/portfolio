@@ -2,9 +2,11 @@
 /* ======================================[ Default Settings for Displays over 1500px ]================================*/
 :root{
     --text-color: #28322b;
-    --white: #f6f6f6;
+    --white: #fff;
     --red: #DB2955;
     --green: #44BBA4;
+    --color-gray: #666;
+    --color-black: #000;
 
 }
 *{
@@ -85,8 +87,8 @@ nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background-color: transparent;
     border: 1px solid #af2fa2;
+    background-color: var(--white);
 }
 .home-button{
     padding-left: 8vw;
@@ -145,6 +147,12 @@ li{
 
 
 /* ==================================[ about ]========================================== */
+
+#about{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
 .text-image{
     display: grid;
 }
