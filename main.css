@@ -44,19 +44,25 @@ p{
     font-size: 1em;
     margin: 8px 0;
     color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 b{
     font-family: Montserrat, sans-serif;
     font-size: 1.1em;
     font-weight: bolder;
     color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 a{
     font-family: Montserrat, sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     text-decoration: none;
     color: var(--text-color);
     background-color: transparent;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 .big{
     font-size: 3em;
@@ -64,30 +70,45 @@ a{
 
 
 /* =========================================[ Components ]===================================*/
-.normal-button{
-    margin: 0.15em 0;
-    padding: 15px 25px;
-    border-radius: 10px;
-    transition: all 0.2s ease-in-out;
+.normal-link{
+    border-bottom: 2px solid var(--text-color);
+    margin-inline: 10px;
+    padding: 3px;
+    padding-inline: 5px;
+    transition: 0.3s ease-in-out;
 }
-.normal-button:hover{
-    margin: 0;
-    filter: brightness(90%);
-    font-size: 1.3em;
+.normal-link:hover{
+    margin-inline: 0;
+    padding: 3px;
+    padding-inline: 15px;
+
+}
+.outer-link{
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
-.red-button{
+.outer-link:hover{
+    padding: 10px 20px;
+}
+
+.red-link{
+    transition: 1s ease-in-out;
     color: var(--white);
-    background-color: var(--red);
+    background: rgb(219,41,85);
+    background: linear-gradient(270deg, rgba(219,41,85,1) 0%, rgba(191,63,107,1) 30%, rgba(181,36,170,1) 100%) repeat;
 }
-
+.red-link:hover {
+    background: linear-gradient(90deg, rgba(219,41,85,1) 0%, rgba(191,63,107,1) 30%, rgba(181,36,170,1) 100%) repeat;
+}
 /* ========================================[ Navigation bar ]===============================*/
 nav{
     position: fixed;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border: 1px solid #af2fa2;
+    border: 1px solid transparent;
     background-color: var(--white);
 }
 .home-button{
@@ -111,6 +132,11 @@ li{
     text-align: center;
     color: var(--text-color);
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
 }
 
 /* ==================================[ hero ] ========================================= */
@@ -129,8 +155,6 @@ li{
 .hero-text{
     flex-grow: 2;
     width: 40vw;
-    letter-spacing: 1px;
-    line-height: 1.5;
     font-weight: 500;
 }
 
@@ -152,11 +176,54 @@ li{
     width: 100vw;
     height: 100vh;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
 }
-.text-image{
-    display: grid;
+.about-container{
+    margin: 0 10vw;
+    display: flex;
+    align-items: center;
+}
+.about-text{
+    padding: 20px 10vw;
+    flex-grow: 2;
+}
+
+.about-image-container{
+    padding: 5vh 5vw;
+    border-radius: 10px;
+    border-top: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
 }
 #about-image{
     height: 60vh;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+}
+
+/* -----------------------------------[ skills ]---------------------------------*/
+.skill-holder{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills{
+    width: 100px;
+    margin: 10px;
+    border: 1px solid var(--text-color);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.skills p{
+    transition: all 0.3s ease-in-out;
+
+}
+.skills:hover{
+    border: 1px solid var(--text-color);
+    background: var(--text-color);
+}
+.skills:hover p{
+    background-color: var(--text-color);
+    color: var(--white);
 }
 
