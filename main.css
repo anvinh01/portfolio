@@ -84,6 +84,7 @@ a{
 
 }
 .outer-link{
+    margin-right: 5px;
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
@@ -138,7 +139,25 @@ li{
 .nav-link:hover{
     text-decoration: underline;
 }
+/* =========================================[ Side Navigation ]===========================================*/
+#side-navigation{
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 0;
+    padding-left: 20px;
+    border-left: 1px solid var(--text-color);
+}
+#side-nav-links{
 
+}
+.side-link{
+    left: -10px;
+    width: max-content;
+}
 /* ==================================[ hero ] ========================================= */
 .hero{
     width: 100vw;
@@ -166,7 +185,9 @@ li{
     flex-grow: 1;
 }
 
-
+#RUB-link{
+    color: midnightblue;
+}
 
 
 
@@ -175,7 +196,6 @@ li{
 #about{
     width: 100vw;
     height: 100vh;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
 }
@@ -198,7 +218,6 @@ li{
 #about-image{
     height: 60vh;
     border-radius: 10px;
-    border: 1px solid var(--text-color);
 }
 
 /* -----------------------------------[ skills ]---------------------------------*/
@@ -227,3 +246,15 @@ li{
     color: var(--white);
 }
 
+/* ==========================================[ portfolio ]=================================================*/
+#portfolio{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-holder{
+    display: flex;
+}
