@@ -2,18 +2,22 @@
 /* ======================================[ Default Settings for Displays over 1500px ]================================*/
 :root{
     --text-color: #28322b;
-    --white: #fff;
+    --white: #e6e6e6;
     --red: #DB2955;
     --green: #44BBA4;
     --color-gray: #666;
     --color-black: #000;
+    --shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    --neumorph-shadow: -20px 20px 60px #c4c4c4,
+                        20px -20px 60px #ffffff;
 
+    font-size: 20px;
 }
 *{
     margin: 0;
     padding: 0;
     background-color: var(--white);
-
+    text-size-adjust: none;
 }
 @font-face {
     font-family: Montserrat;
@@ -21,27 +25,27 @@
 
 h1{
     font-family: Montserrat, sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     color: var(--text-color);
 }
 h2{
     font-family: Montserrat, sans-serif;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--text-color);
 }
 h3{
     font-family: Montserrat, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--text-color);
 }
 h4{
     font-family: Montserrat, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: var(--text-color);
 }
 p{
     font-family: Montserrat, sans-serif;
-    font-size: 1em;
+    font-size: 1.2rem;
     margin: 8px 0;
     color: var(--text-color);
     letter-spacing: 1px;
@@ -49,7 +53,7 @@ p{
 }
 b{
     font-family: Montserrat, sans-serif;
-    font-size: 1.1em;
+    font-size: 1.19rem;
     font-weight: bolder;
     color: var(--text-color);
     letter-spacing: 1px;
@@ -57,7 +61,7 @@ b{
 }
 a{
     font-family: Montserrat, sans-serif;
-    font-size: 1em;
+    font-size: 1.1rem;
     text-decoration: none;
     color: var(--text-color);
     background-color: transparent;
@@ -65,7 +69,7 @@ a{
     line-height: 1.5;
 }
 .big{
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 
@@ -73,9 +77,13 @@ a{
 .normal-link{
     border-bottom: 2px solid var(--text-color);
     margin-inline: 10px;
-    padding: 3px;
+    padding: 10px;
     padding-inline: 5px;
     transition: 0.3s ease-in-out;
+    border-radius: 15px;
+
+    box-shadow: var(--neumorph-shadow);
+
 }
 .normal-link:hover{
     margin-inline: 0;
@@ -158,17 +166,34 @@ li{
     left: -10px;
     width: max-content;
 }
+/* ==========================================[ Basic 2 page Layout ]========================================*/
+.page{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.flex-holder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.flex-item{
+    min-width: 500px;
+    max-width: 1000px;
+}
 /* ==================================[ hero ] ========================================= */
 .hero{
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: space-between;
 }
 .hero-container{
     margin: 0 10vw;
-    display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 .hero-text{
@@ -179,7 +204,6 @@ li{
 
 .hero-svg{
     padding-top: 15vh;
-    padding-bottom: 15vh;
     width: 40vw;
     height: 70vh;
     flex-grow: 1;
@@ -193,31 +217,18 @@ li{
 
 /* ==================================[ about ]========================================== */
 
-#about{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
 .about-container{
+    width: 100vw;
     margin: 0 10vw;
-    display: flex;
-    align-items: center;
-}
-.about-text{
-    padding: 20px 10vw;
-    flex-grow: 2;
 }
 
 .about-image-container{
-    padding: 5vh 5vw;
     border-radius: 10px;
-    border-top: 1px solid var(--text-color);
-    border-left: 1px solid var(--text-color);
 }
 #about-image{
     height: 60vh;
     border-radius: 10px;
+    box-shadow: var(--neumorph-shadow);
 }
 
 /* -----------------------------------[ skills ]---------------------------------*/
@@ -227,20 +238,22 @@ li{
     align-items: center;
 }
 .skills{
-    width: 100px;
+    width: 150px;
     margin: 10px;
     border: 1px solid var(--text-color);
     text-align: center;
     transition: all 0.3s ease-in-out;
+    box-shadow: var(--shadow);
 }
 .skills p{
     transition: all 0.3s ease-in-out;
-
 }
+
 .skills:hover{
     border: 1px solid var(--text-color);
     background: var(--text-color);
 }
+
 .skills:hover p{
     background-color: var(--text-color);
     color: var(--white);
@@ -256,5 +269,22 @@ li{
 }
 
 .portfolio-holder{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "skill skill"
+                    "year history";
 }
+
+#skills-container{
+    grid-area: skill;
+}
+
+#tech-history{
+    grid-area: history;
+}
+
+#year-container{
+    grid-area: year;
+}
+
+
