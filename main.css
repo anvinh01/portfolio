@@ -51,9 +51,12 @@ p{
     letter-spacing: 1px;
     line-height: 1.5;
 }
+span{
+    font-size: 1.1rem;
+}
 b{
     font-family: Montserrat, sans-serif;
-    font-size: 1.19rem;
+    font-size: 1.3rem;
     font-weight: bolder;
     color: var(--text-color);
     letter-spacing: 1px;
@@ -61,7 +64,7 @@ b{
 }
 a{
     font-family: Montserrat, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: var(--text-color);
     background-color: transparent;
@@ -80,10 +83,6 @@ a{
     padding: 10px;
     padding-inline: 5px;
     transition: 0.3s ease-in-out;
-    border-radius: 15px;
-
-    box-shadow: var(--neumorph-shadow);
-
 }
 .normal-link:hover{
     margin-inline: 0;
@@ -110,6 +109,40 @@ a{
 }
 .red-link:hover {
     background: linear-gradient(90deg, rgba(219,41,85,1) 0%, rgba(191,63,107,1) 30%, rgba(181,36,170,1) 100%) repeat;
+}
+/* ==================================================[ Button ]================================================^*/
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.2s ease;
+}
+
+button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
 }
 /* ========================================[ Navigation bar ]===============================*/
 nav{
@@ -213,7 +246,9 @@ li{
     color: midnightblue;
 }
 
-
+#button-about{
+    margin-right: 10px;
+}
 
 /* ==================================[ about ]========================================== */
 
@@ -223,11 +258,11 @@ li{
 }
 
 .about-image-container{
-    border-radius: 10px;
+    border-radius: 20px;
 }
 #about-image{
     height: 60vh;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: var(--neumorph-shadow);
 }
 
@@ -238,21 +273,12 @@ li{
     align-items: center;
 }
 .skills{
-    width: 150px;
-    margin: 10px;
-    border: 1px solid var(--text-color);
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    box-shadow: var(--shadow);
+    width: 200px;
 }
 .skills p{
     transition: all 0.3s ease-in-out;
 }
 
-.skills:hover{
-    border: 1px solid var(--text-color);
-    background: var(--text-color);
-}
 
 .skills:hover p{
     background-color: var(--text-color);
@@ -268,23 +294,7 @@ li{
     justify-content: center;
 }
 
-.portfolio-holder{
+.skill-holder{
     display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: "skill skill"
-                    "year history";
+    grid-template-columns: 1fr 1fr;
 }
-
-#skills-container{
-    grid-area: skill;
-}
-
-#tech-history{
-    grid-area: history;
-}
-
-#year-container{
-    grid-area: year;
-}
-
-

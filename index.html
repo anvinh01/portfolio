@@ -35,7 +35,7 @@
       </p>
       <br>
       <p>
-        <a href="#about" class="outer-link red-link">About me</a>
+        <button id="button-about"><span class="button_top">About me</span></button>
         or
         <a href="https://www.github.com/anvinh01" class="normal-link">GitHub</a>
       </p>
@@ -66,23 +66,17 @@
   </div>
 </section>
 <section id="portfolio">
-  <div class="portfolio-holder">
-
-    <div class="history">
-        <div class="skill-holder" id="skills-container">
-          <div class="skills"><p>Python</p></div>
-        </div>
-        <div id="tech-history">
-          <h2>Skills History</h2>
-          <p>
-            This is the history content
-          </p>
-        </div>
-        <div class="skill-holder" id="year-container">
-          <div class="skills"><p>2019 - 2022</p></div>
-          <div class="skills"><p>2022 - 2023</p></div>
-        </div>
-    </div>
+  <div class="portfolio-holder flex-holder">
+      <div id="tech-history" class="flex-item">
+        <h2>Skills History</h2>
+        <p>
+          This is the history content
+        </p>
+      </div>
+      <div class="skill-holder flex-item" id="year-container">
+        <button class="skills"><span class="button_top">2019 - 2022</span></button>
+        <button class="skills"><span class="button_top">2022 - 2023</span></button>
+      </div>
   </div>
 </section>
 <section id="contacts">
