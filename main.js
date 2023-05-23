@@ -10,12 +10,8 @@ const knowMeText = {
         "<a href='https://bcmsolutions.de'>BCM Solutions GmbH</a> as a Student. I was introduced to new technologies " +
         "like <b>GraphQL</b>, <b>State Management</b>." ,
     "Python" :
-        "Python was my first programming language. My friend introduced me to learn Python in 2019. " +
-        "",
-    "Tennis" : "This is Tennis",
-    "Piano" : "This is Climbing",
-    "Climbing" : "This is <b>Climbing</b>",
-    "Volleyball" : "This is Volleyball"
+        "<h1>Python</h1><h2>School</h2><p>Python was my first programming language. My friend introduced me to learn Python in 2019. " +
+        "</p>",
 }
 
 function switchKnowMe(content){

@@ -266,6 +266,9 @@ li{
     border-radius: 25px;
     box-shadow: var(--neumorph-shadow);
 }
+#about-image:hover{
+
+}
 
 /* -----------------------------------[ skills ]---------------------------------*/
 .skill-holder{
@@ -299,5 +302,5 @@ li{
     height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
