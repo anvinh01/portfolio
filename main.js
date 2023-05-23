@@ -19,7 +19,7 @@ const knowMeText = {
 }
 
 function switchKnowMe(content){
-    let knowMe = document.getElementById('know-me');
+    let knowMe = document.getElementById('tech-history');
     knowMe.innerHTML = knowMeText[content];
 }
 

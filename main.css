@@ -214,8 +214,9 @@ li{
     flex-wrap: wrap;
 }
 .flex-item{
-    min-width: 500px;
+    min-width: 700px;
     max-width: 1000px;
+    width: min-content;
 }
 /* ==================================[ hero ] ========================================= */
 .hero{
@@ -295,6 +296,8 @@ li{
 }
 
 .skill-holder{
+    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
