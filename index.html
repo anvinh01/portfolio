@@ -28,7 +28,7 @@
 
     <div class="hero-text flex-item">
       <h1>Vinh An Tran</h1>
-      <p>I am a passionate <b>Computer-Science Student</b> at the <b><a id="RUB-link" href="https://www.ruhr-uni-bochum.de/de">RUB</a></b>.<br>
+      <p>I am a passionate <b>Computer-Science Student</b> at the <b><a class="blue-link" href="https://www.ruhr-uni-bochum.de/de">RUB</a></b>.<br>
         This is still the <b>start of my journey</b> in the big world of software-development and I am happy that you found this
         website.
         You will get to know the <b>history of my technical skills</b> and who I am as a person.
@@ -83,8 +83,28 @@
   </div>
 </section>
 <section id="contacts">
-  <h2>Contacts</h2>
-  <p>this is some of my contacts</p>
+  <div class="contact-holder">
+    <div>
+      <h2>Contacts</h2><br>
+      <p>
+        If you have any inquiries or would like to discuss potential collaboration opportunities, please <b>feel free to reach out</b> to me.
+        I am excited to hear about your projects and ideas. You can contact me using the form below, or alternatively,
+        you can send me an email directly at <b><a class="blue-link" href="mailto:anvinh@gmx.de">anvinh@gmx.de</a></b>.
+        I strive to respond promptly and look forward to connecting with you.
+        Thank you for visiting my web development portfolio!
+      </p><br>
+    </div>
+    <div class="fake-button contact-form">
+      <form id="contact-me" class="button_top contact-form">
+        <label for="email" hidden="hidden">email:</label>
+        <input type="email" name="email" id="email" placeholder="example@email.com"><br>
+        <label for="content" hidden="hidden">Content:</label>
+        <textarea name="content" id="content" rows="5" cols="40" placeholder="Content ..."></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </div>
 </section>
 <footer>
   <p>Some information</p>

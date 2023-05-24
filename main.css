@@ -122,7 +122,16 @@ button {
     border-radius: var(--button_radius);
     background: var(--button_outline_color);
 }
-
+.fake-button{
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
 .button_top {
     display: block;
     box-sizing: border-box;
@@ -141,6 +150,26 @@ button:hover .button_top {
 }
 
 button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+.fake-button{
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+.fake-button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.fake-button:active .button_top {
     /* Push the button downwards when pressed */
     transform: translateY(0);
 }
@@ -243,8 +272,8 @@ li{
     flex-grow: 1;
 }
 
-#RUB-link{
-    color: midnightblue;
+.blue-link{
+    color: #2222ad;
 }
 
 #button-about{
@@ -293,7 +322,6 @@ li{
 #portfolio{
     width: 100vw;
     height: 100vh;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
 }
@@ -303,4 +331,29 @@ li{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* ======================================[ contact holder ]================================================*/
+#contacts{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.contact-holder{
+    text-align: center;
+    width: 50vw;
+}
+#content{
+    width: 70%;
+}
+#contact-me{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.contact-form{
+    width: 100%;
+    height: 30vh;
 }
