@@ -46,7 +46,7 @@ const knowMeText = {
         "<p>" +
         "My first exposure to Java occurred during my time in school. However, it was in university, specifically during the <b>\"Object-Oriented Programming\" module</b>, " +
         "that I truly delved into the language and discovered <b>design patterns</b>. " +
-        "This exploration was both captivating and enlightening. Additionally, during the \"Game-development\" module, I had the opportunity to work with Unity and C#. " +
+        "This exploration was both captivating and enlightening. Additionally, during the \"Game-development\" module, I had the opportunity to work with <b>Unity and C#</b>. " +
         "The familiarity of C# with its resemblance to Java and JavaScript made it <b>easy for me to adapt</b>. " +
         "The knowledge of design patterns acquired previously proved to be valuable in this context. " +
         "Although it is <b>not my primary programming language</b>, working with Java and C# continues to bring me great joy." +

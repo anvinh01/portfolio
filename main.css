@@ -113,6 +113,7 @@ a{
 /* ==================================================[ Button ]================================================^*/
 button {
     /* Variables */
+
     --button_radius: 0.75em;
     --button_color: #e8e8e8;
     --button_outline_color: #000000;
@@ -178,18 +179,23 @@ nav{
     position: fixed;
     display: flex;
     width: 100%;
+    z-index: 4;
     justify-content: space-between;
     border: 1px solid transparent;
-    background-color: var(--white);
+    background-color: transparent;
+    padding-top: 30px;
 }
 .home-button{
     padding-left: 8vw;
 }
 #navigation-links{
+
+    background-color: transparent;
     padding-right: 8vw;
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 li{
@@ -199,11 +205,15 @@ li{
 .nav-link{
     flex-grow: 2;
     display: block;
+    position: relative;
+    z-index: 3;
     padding: 20px 20px;
     text-align: center;
     color: var(--text-color);
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    width: fit-content;
+    box-shadow: rgba(99, 99, 99, 0.5) 0 5px 8px 0;
 }
 
 .nav-link:hover{
@@ -307,6 +317,8 @@ li{
 }
 .skills{
     width: 200px;
+    position: relative;
+    z-index: 3;
 }
 .skills p{
     transition: all 0.3s ease-in-out;
@@ -332,7 +344,11 @@ li{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
-
+.portfolio-holder{
+    display: flex;
+    justify-content: center;
+    min-height: 700px;
+}
 /* ======================================[ contact holder ]================================================*/
 #contacts{
     display: flex;

@@ -14,9 +14,9 @@
       <img src="" alt="home" class="nav-link">
     </a>
     <ul id="navigation-links">
-      <li><a href="#about" class="nav-link">About Me</a></li>
-      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-      <li><a href="#contacts" class="nav-link">Contacts</a></li>
+      <li class="fake-button"><a href="#about" class="nav-link button_top">About Me</a></li>
+      <li class="fake-button"><a href="#portfolio" class="nav-link button_top">Portfolio</a></li>
+      <li class="fake-button"><a href="#contacts" class="nav-link button_top">Contacts</a></li>
     </ul>
   </nav>
 
@@ -65,21 +65,23 @@
     </div>
   </div>
 </section>
-<section id="portfolio">
-  <div class="portfolio-holder flex-holder">
+<section id="portfolio" class="page">
+  <div class="flex-holder">
+    <div class="portfolio-holder">
       <div id="tech-history" class="flex-item">
         <h2>Skills History</h2>
         <p>
           This is the history content
         </p>
       </div>
-      <div class="skill-holder flex-item" id="year-container">
-        <button class="skills"><span class="button_top" onclick="switchKnowMe('2019-2022')">2019 - 2022</span></button>
-        <button class="skills"><span class="button_top" onclick="switchKnowMe('2022-2023')">2022 - 2023</span></button>
-        <button class="skills"><span class="button_top" onclick="switchKnowMe('Python')">Python</span></button>
-        <button class="skills"><span class="button_top" onclick="switchKnowMe('Web-Dev')">Web-Dev</span></button>
-        <button class="skills"><span class="button_top" onclick="switchKnowMe('Java/C#')">Java/C#</span></button>
-      </div>
+    </div>
+    <div class="skill-holder flex-item" id="year-container">
+      <button class="skills"><span class="button_top" onclick="switchKnowMe('2019-2022')">2019 - 2022</span></button>
+      <button class="skills"><span class="button_top" onclick="switchKnowMe('2022-2023')">2022 - 2023</span></button>
+      <button class="skills"><span class="button_top" onclick="switchKnowMe('Python')">Python</span></button>
+      <button class="skills"><span class="button_top" onclick="switchKnowMe('Web-Dev')">Web-Dev</span></button>
+      <button class="skills"><span class="button_top" onclick="switchKnowMe('Java/C#')">Java/C#</span></button>
+    </div>
   </div>
 </section>
 <section id="contacts">
@@ -103,7 +105,6 @@
         <input type="submit" value="Submit">
       </form>
     </div>
-
   </div>
 </section>
 <footer>
