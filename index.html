@@ -96,11 +96,11 @@
       </p><br>
     </div>
     <div class="contact-form flex-holder">
-      <form id="contact-me" class="contact-form flex-small">
+      <form id="contact-me" class="contact-form flex-small" action="mailto:anvinh@gmx.de" method="post" enctype="text/plain">
         <label for="email" hidden="hidden">email:</label>
-        <input type="email" name="email" class="form-size" id="email" placeholder="example@email.com"><br>
+        <input type="email" name="email" class="form-size" id="email" placeholder="example@email.com" required><br>
         <label for="content" hidden="hidden">Content:</label>
-        <textarea name="content" id="content" class="form-size" rows="5" cols="40" placeholder="Content ..."></textarea><br>
+        <textarea name="content" id="content" class="form-size" rows="10" cols="40" placeholder="Content ..." required></textarea><br>
         <input type="submit" class="submit form-size" value="Submit">
       </form>
       <div class="flex-small">

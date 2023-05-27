@@ -46,7 +46,7 @@ h4{
     font-size: 1.3rem;
     color: var(--text-color);
 }
-p{
+p, input, textarea{
     font-family: Montserrat, sans-serif;
     font-size: 1.2rem;
     margin: 8px 0;
@@ -78,6 +78,12 @@ a{
     font-size: 3rem;
 }
 
+textarea{
+    padding: 8px;
+}
+input{
+    padding: 8px;
+}
 
 /* =========================================[ Components ]===================================*/
 .normal-link{
@@ -164,6 +170,8 @@ button:active .button_top {
     /* Push the button downwards when pressed */
     transform: translateY(0);
 }
+/* =========================================[ Input ] =================================*/
+
 /* ========================================[ Navigation bar ]===============================*/
 nav{
     position: fixed;
@@ -236,7 +244,6 @@ li{
     justify-content: center;
 }
 .flex-holder{
-    border: 1px solid black;
     height: min-content;
     width: 100%;
     display: flex;
@@ -252,8 +259,8 @@ li{
 
 .flex-small{
     min-width: 300px;
-    max-width: 500px;
-    width: min-content;
+    max-width: 600px;
+    width: max-content;
 }
 /* ==================================[ hero ] ========================================= */
 .hero{
@@ -343,7 +350,6 @@ li{
     grid-template-rows: 1fr 1fr 1fr;
 }
 .portfolio-holder{
-    border: 1px solid blue;
     display: flex;
     justify-content: center;
     min-height: 700px;
@@ -357,7 +363,7 @@ li{
     width: 50vw;
 }
 #content{
-    width: 70%;
+    width: 100%;
 }
 #contact-me{
     display: grid;
@@ -366,17 +372,37 @@ li{
 }
 
 .contact-form{
+    margin-top: 50px;
     width: 100%;
-    height: 30vh;
+    height: 40vh;
 }
 
 .form-size{
-    font-size: var(--font-size);
+    border-radius: 4px 15px 15px 4px;
+}
+input[type="email"], textarea{
+    background-color: var(--white);
 }
 .submit{
+    font-size: var(--font-size);
+    font-weight: bold;
     background-color: var(--red);
     border-radius: var(--button_radius);
     color: var(--white);
     width: 200px;
+    padding: 14px;
+    transition: all 0.23s ease-in-out;
+    border: 1px solid var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+    border-bottom: 8px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    white-space: pre-line;
+}
+.submit:hover{
+    background-color: var(--white);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    margin-top: 7px;
 }
 

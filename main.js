@@ -63,7 +63,16 @@ function createNewPortfolio(){
     temp.className = "flex-item";
 }
 
+const form = document.getElementById("contact-me")
 
+form.addEventListener("submit", (e) => {
+
+
+    window.location.href = "mailto:me@example.com"
+        + "?cc=myCCaddress@example.com"
+        + "&subject=" + encodeURIComponent("This is my subject")
+        + "&body=" + encodeURIComponent(document.getElementById('myText').value);
+})
 
 switchKnowMe("Nothing");        // init text for skill history
 
