@@ -10,7 +10,10 @@
     --shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
     --neumorph-shadow: -20px 20px 60px #c4c4c4,
                         20px -20px 60px #ffffff;
-
+    --button_radius: 0.75rem;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    --font-size: 20px;
     font-size: 20px;
 }
 *{
@@ -113,26 +116,13 @@ a{
 /* ==================================================[ Button ]================================================^*/
 button {
     /* Variables */
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: calc(var(--button_radius) + 0.1rem);
+    background: var(--button_outline_color);
+}
 
-    --button_radius: 0.75em;
-    --button_color: #e8e8e8;
-    --button_outline_color: #000000;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
-    border-radius: var(--button_radius);
-    background: var(--button_outline_color);
-}
-.fake-button{
-    --button_radius: 0.75em;
-    --button_color: #e8e8e8;
-    --button_outline_color: #000000;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
-    border-radius: var(--button_radius);
-    background: var(--button_outline_color);
-}
 .button_top {
     display: block;
     box-sizing: border-box;
@@ -246,6 +236,8 @@ li{
     justify-content: center;
 }
 .flex-holder{
+    border: 1px solid black;
+    height: min-content;
     width: 100%;
     display: flex;
     align-items: center;
@@ -255,6 +247,12 @@ li{
 .flex-item{
     min-width: 700px;
     max-width: 1000px;
+    width: min-content;
+}
+
+.flex-small{
+    min-width: 300px;
+    max-width: 500px;
     width: min-content;
 }
 /* ==================================[ hero ] ========================================= */
@@ -345,6 +343,7 @@ li{
     grid-template-rows: 1fr 1fr 1fr;
 }
 .portfolio-holder{
+    border: 1px solid blue;
     display: flex;
     justify-content: center;
     min-height: 700px;
@@ -373,3 +372,14 @@ li{
     width: 100%;
     height: 30vh;
 }
+
+.form-size{
+    font-size: var(--font-size);
+}
+.submit{
+    background-color: var(--red);
+    border-radius: var(--button_radius);
+    color: var(--white);
+    width: 200px;
+}
+

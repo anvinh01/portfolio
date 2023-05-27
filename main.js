@@ -58,6 +58,13 @@ function switchKnowMe(content){
     knowMe.innerHTML = knowMeText[content];
 }
 
+function createNewPortfolio(){
+    let temp = document.createElement("div");
+    temp.className = "flex-item";
+}
+
+
+
 switchKnowMe("Nothing");        // init text for skill history
 
 
