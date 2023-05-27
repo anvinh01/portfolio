@@ -53,29 +53,36 @@ const knowMeText = {
         "</p>"
 }
 
-function switchKnowMe(content){
-    let knowMe = document.getElementById('tech-history');
-    knowMe.innerHTML = knowMeText[content];
-}
-
-function createNewPortfolio(){
+function createNewPortfolioElement(){
     let temp = document.createElement("div");
-    temp.className = "flex-item";
+    temp.className = "flex-item portfolio-item";
+    return temp;
+}
+const portfolio = document.getElementById("port-holder");
+
+for (let knowMeTextKey in knowMeText) {
+    let tempHolder = createNewPortfolioElement();
+    tempHolder.innerHTML = knowMeText[knowMeTextKey];
+    tempHolder.id = knowMeTextKey;
+    tempHolder.className += " isNotActive";
+    console.log(tempHolder);
+    portfolio.appendChild(tempHolder);
 }
 
-const form = document.getElementById("contact-me")
+let firstItem = document.getElementById("Nothing");
+let newClass = firstItem.className.replace("isNotActive", "isActive");
+firstItem.className = newClass;
 
-form.addEventListener("submit", (e) => {
-
-
-    window.location.href = "mailto:me@example.com"
-        + "?cc=myCCaddress@example.com"
-        + "&subject=" + encodeURIComponent("This is my subject")
-        + "&body=" + encodeURIComponent(document.getElementById('myText').value);
-})
-
-switchKnowMe("Nothing");        // init text for skill history
-
+function switchPortfolio(content){
+    let buttons = document.getElementsByClassName("portfolio-item");
+    for (let button = 0; button < buttons.length; button++) {
+        console.log(buttons[button]);
+        buttons[button].className = "flex-item portfolio-item isNotActive";
+    }
+    let temp = document.getElementById(content);
+    console.log(temp);
+    temp.className = temp.className.replace("isNotActive", "isActive");
+}
 
 
 
