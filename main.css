@@ -350,10 +350,7 @@ li{
 }
 /* ======================================[ contact holder ]================================================*/
 #contacts{
-    display: flex;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
+
 }
 .contact-holder{
     text-align: center;
