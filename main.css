@@ -188,6 +188,11 @@ nav{
 .home-button{
     padding-left: 8vw;
 }
+#home-icon{
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
 #navigation-links{
     background-color: transparent;
     padding-right: 8vw;
