@@ -20,11 +20,12 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: var(--white);
+    background-color: transparent;
     text-size-adjust: none;
 }
 html {
     scroll-behavior: smooth;
+    background-color: var(--white);
 }
 @font-face {
     font-family: Montserrat;
@@ -243,6 +244,7 @@ li{
 }
 /* ==========================================[ Basic 2 page Layout ]========================================*/
 .page{
+    padding-top: 5rem;
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -319,7 +321,10 @@ li{
 #about-image:hover{
 
 }
-
+.about-text{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
 /* -----------------------------------[ skills ]---------------------------------*/
 .skill-holder{
     display: flex;
@@ -356,10 +361,10 @@ li{
     grid-template-rows: 1fr 1fr 1fr;
 }
 .portfolio-holder{
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 700px;
 }
 .portfolio-item{
     transition: 0.3s ease-in-out;
@@ -370,12 +375,21 @@ li{
 .isNotActive{
     display: none;
 }
+#year-container{
+    height: 50vh;
+}
 /* ======================================[ contact holder ]================================================*/
 #contacts{
+    height: 60vh;
 
 }
 .contact-holder{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+#contacts-text{
     width: 50vw;
 }
 #content{
@@ -387,48 +401,13 @@ li{
 
 }
 
-.contact-form{
-    margin-top: 50px;
-    width: 100%;
-    height: 40vh;
-}
-
-.form-size{
-    border-radius: 4px 15px 15px 4px;
-}
-input[type="email"], textarea{
-    background-color: var(--white);
-}
-.submit{
-    font-size: var(--font-size);
-    font-weight: bold;
-    background-color: var(--red);
-    border-radius: var(--button_radius);
-    color: var(--white);
-    width: 200px;
-    padding: 14px;
-    transition: all 0.23s ease-in-out;
-    border: 1px solid var(--text-color);
-    border-top: 1px solid var(--text-color);
-    border-right: 1px solid var(--text-color);
-    border-bottom: 8px solid var(--text-color);
-    border-left: 1px solid var(--text-color);
-    white-space: pre-line;
-}
-.submit:hover{
-    background-color: var(--white);
-    color: var(--text-color);
-    border-bottom: 1px solid var(--text-color);
-    margin-top: 7px;
-}
-
 /* =======================================| Icons ]=================================*/
 #icon-holder{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vh;
-    width: 100%;
+    height: 5vh;
+    width: 90vw;
     padding-top: 10vh;
 }
 #icon-holder a{
