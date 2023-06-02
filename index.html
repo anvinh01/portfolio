@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Hello, World!</title>
-  <!-- <link rel="stylesheet" type="text/css" media="screen and (min-width: 600px)" href="main600.css">
-  <link rel="stylesheet" type="text/css" media="screen and (min-width: 1500px)" href="main.css"> -->
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -66,9 +64,18 @@
 </section>
 <section id="portfolio" class="page">
   <div class="flex-holder">
-    <div class="portfolio-holder" id="port-holder">
+    <div id="small-skills" class="flex-item">
+      <button class="arrow" onclick="switchback()"><</button>
+      <button class="arrow" onclick="switchPortfolio('2019-2022')">1</button>
+      <button class="arrow" onclick="switchPortfolio('2022-2023')">2</button>
+      <button class="arrow" onclick="switchPortfolio('Python')">3</button>
+      <button class="arrow" onclick="switchPortfolio('Web-Dev')">4</button>
+      <button class="arrow" onclick="switchPortfolio('Java/C#')">5</button>
+      <button class="arrow" onclick="switchForward()">></button>
     </div>
-    <div class="skill-holder flex-item" id="year-container">
+    <div class="portfolio-holder flex-item" id="port-holder">
+    </div>
+    <div class="skill-holder flex-item" id="skill-container">
       <button class="skills"><span class="button_top" onclick="switchPortfolio('2019-2022')">2019 - 2022</span></button>
       <button class="skills"><span class="button_top" onclick="switchPortfolio('2022-2023')">2022 - 2023</span></button>
       <button class="skills"><span class="button_top" onclick="switchPortfolio('Python')">Python</span></button>

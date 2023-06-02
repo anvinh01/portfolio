@@ -53,6 +53,8 @@ const knowMeText = {
         "</p>"
 }
 
+var currentSkill = "Nothing";
+
 function createNewPortfolioElement(){
     let temp = document.createElement("div");
     temp.className = "flex-item portfolio-item";
@@ -65,7 +67,6 @@ for (let knowMeTextKey in knowMeText) {
     tempHolder.innerHTML = knowMeText[knowMeTextKey];
     tempHolder.id = knowMeTextKey;
     tempHolder.className += " isNotActive";
-    console.log(tempHolder);
     portfolio.appendChild(tempHolder);
 }
 
@@ -76,15 +77,47 @@ firstItem.className = newClass;
 function switchPortfolio(content){
     let buttons = document.getElementsByClassName("portfolio-item");
     for (let button = 0; button < buttons.length; button++) {
-        console.log(buttons[button]);
         buttons[button].className = "flex-item portfolio-item isNotActive";
     }
     let temp = document.getElementById(content);
     console.log(temp);
     temp.className = temp.className.replace("isNotActive", "isActive");
+    currentSkill = content;
+    skillActive(content)
 }
 
+function switchback(){
+    let skills = Object.keys(knowMeText).map((key) => key)
+    let  indexSkill = skills.indexOf(currentSkill)
+    if (indexSkill > 0) {
+        switchPortfolio(skills[indexSkill - 1])
+        currentSkill = skills[indexSkill - 1]
+        skillActive(currentSkill)
+    }
+}
 
+function switchForward(){
+    let skills = Object.keys(knowMeText).map((key) => key)
+    let  indexSkill = skills.indexOf(currentSkill)
+    if (indexSkill < skills.length - 1) {
+        switchPortfolio(skills[indexSkill + 1])
+        currentSkill = skills[indexSkill + 1]
+        skillActive(currentSkill)
+    }
+}
+
+function skillActive(nextSkill){
+    let skills = Object.keys(knowMeText).map((key) => key)
+    let  indexSkill = skills.indexOf(nextSkill)
+    let buttons = document.getElementsByClassName("arrow");
+    for (let button = 0; button < buttons.length; button++) {
+        let currButton = buttons[button]
+        if(button === indexSkill && indexSkill !== 0 && indexSkill!== skills.length){
+            currButton.click()
+            currButton.focus()
+        }
+    }
+}
 
 
 

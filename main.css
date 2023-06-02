@@ -365,6 +365,11 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-transition: all .3s linear .3s;
+    -moz-transition: all .3s linear .3s;
+    -ms-transition: all .3s linear .3s;
+    -o-transition: all .3s linear .3s;
+    transition: all .3s linear .3s;
 }
 .portfolio-item{
     transition: 0.3s ease-in-out;
@@ -375,8 +380,43 @@ li{
 .isNotActive{
     display: none;
 }
-#year-container{
-    height: 50vh;
+
+@media screen and (min-width: 1000px){
+    #skill-container{
+        visibility: visible;
+        height: 50vh;
+    }
+    #small-skills{
+        visibility: hidden;
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px)  {
+
+    #skill-container{
+        visibility: hidden;
+    }
+
+    #small-skills{
+        width: 80%;
+        display: flex;
+        visibility: visible;
+        justify-content: space-evenly;
+    }
+}
+
+.arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.arrow:focus{
+    background-color: var(--text-color);
+    color: var(--white);
 }
 /* ======================================[ contact holder ]================================================*/
 #contacts{
