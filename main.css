@@ -187,7 +187,9 @@ nav{
     height: var(--nav-size);
 }
 .home-button{
+    background-color: var(--white);
     padding-left: 8vw;
+    transition: 0.3s ease-in-out;
 }
 #home-icon{
     height: 100%;
