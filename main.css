@@ -246,7 +246,6 @@ li{
 }
 /* ==========================================[ Basic 2 page Layout ]========================================*/
 .page{
-    padding-top: 5rem;
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -383,7 +382,7 @@ li{
     display: none;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1300px){
     #skill-container{
         visibility: visible;
         height: 50vh;
@@ -393,7 +392,38 @@ li{
         display: none;
     }
 }
-@media only screen and (max-width: 1000px)  {
+
+
+
+/* -------------------------------- for mobile devices --------------------------------*/
+@media only screen and (max-width: 1300px)  {
+    .small-skill-holder{
+        height: 90vh;
+        justify-content: space-evenly;
+    }
+    .skill-holder{
+        height: 0;
+    }
+    .page{
+        padding-top: 3vh;
+    }
+    .about-image-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #about-image{
+        height: 40vh;
+        border-radius: 25px;
+        box-shadow: var(--neumorph-shadow);
+    }
+
+    .hero-svg{
+        padding-top: 0;
+        width: 80vw;
+        height: 50vh;
+        flex-grow: 1;
+    }
 
     #skill-container{
         visibility: hidden;
@@ -408,8 +438,8 @@ li{
 }
 
 .arrow{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid var(--text-color);
