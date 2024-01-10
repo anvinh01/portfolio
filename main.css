@@ -221,6 +221,7 @@ li{
     transition: 0.3s ease-in-out;
     width: fit-content;
     align-content: center;
+    align-items: center;
     box-shadow: rgba(99, 99, 99, 0.5) 0 5px 8px 0;
 }
 

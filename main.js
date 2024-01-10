@@ -98,21 +98,21 @@ function switchback(){
 
 function switchForward(){
     let skills = Object.keys(knowMeText).map((key) => key)
-    let  indexSkill = skills.indexOf(currentSkill)
+    let indexSkill = skills.indexOf(currentSkill)
     if (indexSkill < skills.length - 1) {
         switchPortfolio(skills[indexSkill + 1])
-        currentSkill = skills[indexSkill + 1]
+        currentSkill = indexSkill == skills.length - 1 ? skills[indexSkill-1] : skills[indexSkill + 1]
         skillActive(currentSkill)
     }
 }
 
 function skillActive(nextSkill){
     let skills = Object.keys(knowMeText).map((key) => key)
-    let  indexSkill = skills.indexOf(nextSkill)
+    let indexSkill = skills.indexOf(nextSkill)
     let buttons = document.getElementsByClassName("arrow");
     for (let button = 0; button < buttons.length; button++) {
         let currButton = buttons[button]
-        if(button === indexSkill && indexSkill !== 0 && indexSkill!== skills.length){
+        if(button === indexSkill && indexSkill !== 0 && indexSkill !== skills.length ){
             currButton.click()
             currButton.focus()
         }
